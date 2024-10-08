@@ -1,0 +1,61 @@
+Roles:
+  - Patient
+  - Doctor
+  - Admin
+
+
+Doctor's Model:
+
+  Personal Info
+  - Full Name (First Name, Last Name)
+  - Gender
+    - Male
+    - Female
+  - Date of Birth
+  - Specialiazation 
+    - neurologist
+    - gynacologist
+    - dentist
+    - general surgon
+    - physiotherapist
+  - General Description
+  - Profile Picture
+
+  Education
+  - Doctor
+  - Institution
+  - Degree
+  - Degree Number
+
+  Experience
+  - Doctor
+  - institution
+  - Possition
+  - Start Date 
+  - End Date
+
+  Contact Info
+  - Doctor
+  - Hospital Name
+  - Hospital Phone Number
+  - Hospital Address
+  - Personal Phone Number (opt)
+  - Personal Email (opt)
+  - Assistant Phone Number (opt)
+
+  Availability
+  - Day
+  - Holiday
+  - Opening Hour
+  - Closing Hour
+
+
+
+
+
+
+
+
+
+
+
