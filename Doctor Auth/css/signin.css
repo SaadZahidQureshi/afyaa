@@ -1,0 +1,142 @@
+
+.modal-content {
+    padding: 14px;
+    width: 800px;
+    height: 685px;
+    border-radius: 20px;
+}
+
+.modal-header {
+    border-bottom: unset;
+}
+
+.modal-header.forgot-password {
+    padding-bottom: unset;
+}
+
+.sub-header {
+    width: 100%;
+}
+
+.sub-header > p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 33px;
+    margin: unset;
+    color: #7c7c7c;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.btn-close {
+    color: red;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    opacity: unset;
+    width: 5px;
+    height: 5px;
+    background-color: transparent !important;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-body-content, .main-footer-content {
+    width: 342px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-body-content > .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.main-body-content > .input-wrapper.forgot-password {
+    align-items: flex-end;
+}
+
+.main-body-content > .input-wrapper > div {
+    position: relative;
+}
+
+.main-body-content > .input-wrapper > div > svg{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.modal-footer {
+    border-top: unset;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.main-footer-content > p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.6px;
+    margin: unset;
+}
+
+.separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid #A6A7A8;
+    margin: unset;
+}
+
+.btn.social-btn {
+    background-color: #F5F6F8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+}
+
+/* forgot password screen*/
+
+.back-btn {
+    background-color: #ffffff !important;
+    box-shadow: 0px 0px 20px 0px #D0D1D780 !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* verify otp screen  */ 
+
+.code-inputs {
+    display: flex;
+    gap: 20px;   
+}
+
+.code-inputs > input {
+    text-align: center;
+}
+
+.filled-input {
+    border: 1px solid var(--primary-color) !important;
+    background: #F3EFFA;
+    color: var(--primary-color) !important;
+}
