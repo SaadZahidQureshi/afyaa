@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In | Doctor </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signin.css">
+  </head>
+  <body>
+    <h1>Hello, Doctor!!</h1>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SigninModal">
+        Launch demo modal
+    </button>
+
+    <!-- Signin Modal -->
+    <div class="modal fade" id="SigninModal" tabindex="-1" aria-labelledby="SigninModalLabel" aria-hidden="true" data-bs-backdrop="static"> 
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            
+            <div class="modal-content" id="signin-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SigninModalLabel">Sign In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-body-content">
+                        <div class="input-wrapper">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" name="email" id="email-address" placeholder="@alexa01" maxlength="50">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="password">Password</label>
+                            <div class="w-100 password-input-div">
+                                <input type="password" name="password" data-type="password" id="password" placeholder="******" >
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon hide-password-icon cursor-pointer" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_388_851)">
+                                    <path d="M10.465 10.4652C9.46782 11.2252 8.25363 11.6463 6.99998 11.6668C2.91665 11.6668 0.583313 7.00016 0.583313 7.00016C1.30892 5.64794 2.31531 4.46652 3.53498 3.53516M5.77498 2.4735C6.17651 2.37951 6.5876 2.33253 6.99998 2.3335C11.0833 2.3335 13.4166 7.00016 13.4166 7.00016C13.0626 7.6626 12.6403 8.28626 12.1566 8.861M8.23665 8.23683C8.07644 8.40877 7.88323 8.54667 7.66857 8.64232C7.4539 8.73797 7.22217 8.7894 6.9872 8.79354C6.75223 8.79769 6.51882 8.75447 6.30092 8.66645C6.08301 8.57843 5.88507 8.44743 5.71889 8.28125C5.55271 8.11508 5.42171 7.91713 5.33369 7.69922C5.24568 7.48132 5.20245 7.24792 5.2066 7.01294C5.21075 6.77797 5.26218 6.54624 5.35782 6.33157C5.45347 6.11691 5.59138 5.92371 5.76331 5.7635M0.583313 0.583496L13.4166 13.4168" stroke="#8C4FF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_388_851">
+                                    <rect width="14" height="14" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon show-password-icon hide cursor-pointer" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="7.41501" cy="7.2764" r="2.15111" stroke="#8C4FF6" stroke-width="1.4"/>
+                                    <path d="M13.0017 6.2223C13.3962 6.67583 13.5935 6.9026 13.5935 7.27667C13.5935 7.65073 13.3962 7.8775 13.0017 8.33103C11.9002 9.59739 9.81099 11.5533 7.415 11.5533C5.01901 11.5533 2.92982 9.59739 1.82827 8.33103C1.43377 7.8775 1.23652 7.65073 1.23652 7.27667C1.23652 6.9026 1.43377 6.67583 1.82827 6.2223C2.92982 4.95594 5.01901 3 7.415 3C9.81099 3 11.9002 4.95594 13.0017 6.2223Z" stroke="#8C4FF6" stroke-width="1.7"/>
+                                </svg> 
+                            </div>                                
+                        </div>
+                        <div class="input-wrapper forgot-password">
+                            <a href="#" onclick="toggleModal('signin-modal', 'forgot-password-modal')">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="main-footer-content">
+                        <p>Don’t have an account? <a href="#">Sign Up</a></p>
+                        <button type="button" class="btn btn-primary">Next</button>
+                        <div class="separator">
+                            <div class="w-25"><hr></div><div class="w-50 text-center">Or Sign In</div><div class="w-25"><hr></div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary social-btn">
+                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.3926 16.9275C29.3926 16.11 29.3135 15.2662 29.1816 14.4751H17.7635V19.1426H24.3032C24.0395 20.6456 23.1693 21.9641 21.8772 22.808L25.7799 25.8405C28.0741 23.7046 29.3926 20.5929 29.3926 16.9275Z" fill="#4280EF"/>
+                                <path d="M17.7644 28.7412C21.0343 28.7412 23.7767 27.6601 25.7808 25.8142L21.8781 22.808C20.7969 23.5464 19.3993 23.9683 17.7644 23.9683C14.6 23.9683 11.9367 21.8323 10.961 18.9844L6.95276 22.0696C9.00961 26.157 13.176 28.7412 17.7644 28.7412Z" fill="#34A353"/>
+                                <path d="M10.9606 18.9578C10.4595 17.4547 10.4595 15.8198 10.9606 14.3167L6.95234 11.2051C5.2383 14.6332 5.2383 18.6677 6.95234 22.0695L10.9606 18.9578Z" fill="#F6B704"/>
+                                <path d="M17.7644 9.33298C19.4784 9.30661 21.1661 9.96586 22.4055 11.1525L25.86 7.67168C23.6713 5.61483 20.7706 4.50729 17.7644 4.53366C13.176 4.53366 9.00961 7.11791 6.95276 11.2052L10.961 14.3169C11.9367 11.4426 14.6 9.33298 17.7644 9.33298Z" fill="#E54335"/>
+                            </svg>                                
+                            <span>Sign In with Google</span>
+                            <span></span>
+                        </button>
+                        <button type="button" class="btn btn-primary social-btn">
+                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28.25 2H5.75C3.68187 2 2 3.68187 2 5.75V28.25C2 30.3181 3.68187 32 5.75 32H28.25C30.3181 32 32 30.3181 32 28.25V5.75C32 3.68187 30.3181 2 28.25 2Z" fill="#1976D2"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6298 18.0865H25.0865V14.4519C25.0865 13.4488 25.9007 13.5433 26.9038 13.5433H28.7212V9H25.0865C23.6406 9 22.2539 9.5744 21.2314 10.5968C20.209 11.6193 19.6346 13.006 19.6346 14.4519V18.0865H16V22.6298H19.6346V32.625H25.0865V22.6298H27.8125L29.6298 18.0865Z" fill="#FAFAFA"/>
+                            </svg>                                
+                            <span>Sign In with Facebook</span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-content hide" id="forgot-password-modal">
+                <div class="modal-header forgot-password">
+                    <button type="button" class="back-btn" onclick="toggleModal('forgot-password-modal', 'signin-modal')">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 4.00019H3.41002L5.71002 1.71019C5.89832 1.52188 6.00411 1.26649 6.00411 1.00019C6.00411 0.733883 5.89832 0.478489 5.71002 0.290185C5.52172 0.101881 5.26632 -0.00390625 5.00002 -0.00390625C4.73372 -0.00390625 4.47832 0.101881 4.29002 0.290185L0.290018 4.29018C0.198978 4.38529 0.127613 4.49743 0.0800184 4.62018C-0.0199996 4.86365 -0.0199996 5.13672 0.0800184 5.38018C0.127613 5.50294 0.198978 5.61508 0.290018 5.71018L4.29002 9.71018C4.38298 9.80391 4.49358 9.87831 4.61544 9.92908C4.7373 9.97985 4.86801 10.006 5.00002 10.006C5.13203 10.006 5.26274 9.97985 5.3846 9.92908C5.50645 9.87831 5.61706 9.80391 5.71002 9.71018C5.80375 9.61722 5.87814 9.50662 5.92891 9.38476C5.97968 9.2629 6.00582 9.1322 6.00582 9.00019C6.00582 8.86817 5.97968 8.73747 5.92891 8.61561C5.87814 8.49375 5.80375 8.38315 5.71002 8.29019L3.41002 6.00019H13C13.2652 6.00019 13.5196 5.89483 13.7071 5.70729C13.8947 5.51976 14 5.2654 14 5.00019C14 4.73497 13.8947 4.48061 13.7071 4.29308C13.5196 4.10554 13.2652 4.00019 13 4.00019Z" fill="#8C4FF6"/>
+                        </svg>                            
+                    </button>
+                    <h1 class="modal-title fs-5" id="ForgotPasswordModalLabel">Forgot Password</h1>
+                </div>
+                <div class="sub-header">
+                    <p>Enter registered email address</p>
+                </div>
+                <div class="modal-body">
+                    <div class="main-body-content">
+                        <div class="input-wrapper">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" name="email" id="email-address" placeholder="@alexa01" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="main-footer-content">
+                        <button type="button" class="btn btn-primary" onclick="toggleModal('verify-otp-modal', 'forgot-password-modal')">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-content hide" id="verify-otp-modal">
+                <div class="modal-header forgot-password">
+                    <button type="button" class="back-btn" onclick="toggleModal('forgot-password-modal', 'verify-otp-modal')">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 4.00019H3.41002L5.71002 1.71019C5.89832 1.52188 6.00411 1.26649 6.00411 1.00019C6.00411 0.733883 5.89832 0.478489 5.71002 0.290185C5.52172 0.101881 5.26632 -0.00390625 5.00002 -0.00390625C4.73372 -0.00390625 4.47832 0.101881 4.29002 0.290185L0.290018 4.29018C0.198978 4.38529 0.127613 4.49743 0.0800184 4.62018C-0.0199996 4.86365 -0.0199996 5.13672 0.0800184 5.38018C0.127613 5.50294 0.198978 5.61508 0.290018 5.71018L4.29002 9.71018C4.38298 9.80391 4.49358 9.87831 4.61544 9.92908C4.7373 9.97985 4.86801 10.006 5.00002 10.006C5.13203 10.006 5.26274 9.97985 5.3846 9.92908C5.50645 9.87831 5.61706 9.80391 5.71002 9.71018C5.80375 9.61722 5.87814 9.50662 5.92891 9.38476C5.97968 9.2629 6.00582 9.1322 6.00582 9.00019C6.00582 8.86817 5.97968 8.73747 5.92891 8.61561C5.87814 8.49375 5.80375 8.38315 5.71002 8.29019L3.41002 6.00019H13C13.2652 6.00019 13.5196 5.89483 13.7071 5.70729C13.8947 5.51976 14 5.2654 14 5.00019C14 4.73497 13.8947 4.48061 13.7071 4.29308C13.5196 4.10554 13.2652 4.00019 13 4.00019Z" fill="#8C4FF6"/>
+                        </svg>                            
+                    </button>
+                    <h1 class="modal-title fs-5" id="ForgotPasswordModalLabel">OTP Verification</h1>
+                </div>
+                <div class="sub-header">
+                    <p>Enter the OTP code that we sent on your email address</p>
+                </div>
+                <div class="modal-body">
+                    <div class="main-body-content">
+                        <div class="login-input-group">
+                            <div class="code-inputs">
+                                <input id='input1' data-name="otp-input" required placeholder="•" name="digit1" type='text' maxLength="1" />
+                                <input id='input2' data-name="otp-input" required placeholder="•" name="digit2" type='text' maxLength="1" />
+                                <input id='input3' data-name="otp-input" required placeholder="•" name="digit3" type='text' maxLength="1" />
+                                <input id='input4' data-name="otp-input" required data-position="last" placeholder="•" name="digit4" type='text' maxLength="1" />
+                            </div>
+                            <div class="error-div">
+                                <small class="verify-error-msg input-error-msg"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="main-footer-content">
+                        <p>Didn’t receive the code? <a href="#">Resend</a></p>
+                        <button type="button" class="btn btn-primary" onclick="toggleModal('verify-otp-modal', 'reset-password-modal')">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-content hide" id="reset-password-modal">
+                <div class="modal-header forgot-password">
+                    <button type="button" class="back-btn" onclick="toggleModal('reset-password-modal', 'verify-otp-modal')">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 4.00019H3.41002L5.71002 1.71019C5.89832 1.52188 6.00411 1.26649 6.00411 1.00019C6.00411 0.733883 5.89832 0.478489 5.71002 0.290185C5.52172 0.101881 5.26632 -0.00390625 5.00002 -0.00390625C4.73372 -0.00390625 4.47832 0.101881 4.29002 0.290185L0.290018 4.29018C0.198978 4.38529 0.127613 4.49743 0.0800184 4.62018C-0.0199996 4.86365 -0.0199996 5.13672 0.0800184 5.38018C0.127613 5.50294 0.198978 5.61508 0.290018 5.71018L4.29002 9.71018C4.38298 9.80391 4.49358 9.87831 4.61544 9.92908C4.7373 9.97985 4.86801 10.006 5.00002 10.006C5.13203 10.006 5.26274 9.97985 5.3846 9.92908C5.50645 9.87831 5.61706 9.80391 5.71002 9.71018C5.80375 9.61722 5.87814 9.50662 5.92891 9.38476C5.97968 9.2629 6.00582 9.1322 6.00582 9.00019C6.00582 8.86817 5.97968 8.73747 5.92891 8.61561C5.87814 8.49375 5.80375 8.38315 5.71002 8.29019L3.41002 6.00019H13C13.2652 6.00019 13.5196 5.89483 13.7071 5.70729C13.8947 5.51976 14 5.2654 14 5.00019C14 4.73497 13.8947 4.48061 13.7071 4.29308C13.5196 4.10554 13.2652 4.00019 13 4.00019Z" fill="#8C4FF6"/>
+                        </svg>                            
+                    </button>
+                    <h1 class="modal-title fs-5" id="ForgotPasswordModalLabel">Reset Password</h1>
+                </div>
+                <div class="sub-header">
+                    <p>Enter the new password</p>
+                </div>
+                <div class="modal-body">
+                    <div class="main-body-content">
+                        <div class="input-wrapper">
+                            <label for="password">Password</label>
+                            <div class="w-100 password-input-div">
+                                <input type="password" name="password" data-type="password" id="password" placeholder="******" >
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon hide-password-icon cursor-pointer" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_388_851)">
+                                    <path d="M10.465 10.4652C9.46782 11.2252 8.25363 11.6463 6.99998 11.6668C2.91665 11.6668 0.583313 7.00016 0.583313 7.00016C1.30892 5.64794 2.31531 4.46652 3.53498 3.53516M5.77498 2.4735C6.17651 2.37951 6.5876 2.33253 6.99998 2.3335C11.0833 2.3335 13.4166 7.00016 13.4166 7.00016C13.0626 7.6626 12.6403 8.28626 12.1566 8.861M8.23665 8.23683C8.07644 8.40877 7.88323 8.54667 7.66857 8.64232C7.4539 8.73797 7.22217 8.7894 6.9872 8.79354C6.75223 8.79769 6.51882 8.75447 6.30092 8.66645C6.08301 8.57843 5.88507 8.44743 5.71889 8.28125C5.55271 8.11508 5.42171 7.91713 5.33369 7.69922C5.24568 7.48132 5.20245 7.24792 5.2066 7.01294C5.21075 6.77797 5.26218 6.54624 5.35782 6.33157C5.45347 6.11691 5.59138 5.92371 5.76331 5.7635M0.583313 0.583496L13.4166 13.4168" stroke="#8C4FF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_388_851">
+                                    <rect width="14" height="14" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon show-password-icon hide cursor-pointer" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="7.41501" cy="7.2764" r="2.15111" stroke="#8C4FF6" stroke-width="1.4"/>
+                                    <path d="M13.0017 6.2223C13.3962 6.67583 13.5935 6.9026 13.5935 7.27667C13.5935 7.65073 13.3962 7.8775 13.0017 8.33103C11.9002 9.59739 9.81099 11.5533 7.415 11.5533C5.01901 11.5533 2.92982 9.59739 1.82827 8.33103C1.43377 7.8775 1.23652 7.65073 1.23652 7.27667C1.23652 6.9026 1.43377 6.67583 1.82827 6.2223C2.92982 4.95594 5.01901 3 7.415 3C9.81099 3 11.9002 4.95594 13.0017 6.2223Z" stroke="#8C4FF6" stroke-width="1.7"/>
+                                </svg> 
+                            </div>                                
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="password">Confirm Password</label>
+                            <div class="w-100 password-input-div">
+                                <input type="password" name="password" data-type="password" id="password" placeholder="******" >
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon hide-password-icon cursor-pointer" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_388_851)">
+                                    <path d="M10.465 10.4652C9.46782 11.2252 8.25363 11.6463 6.99998 11.6668C2.91665 11.6668 0.583313 7.00016 0.583313 7.00016C1.30892 5.64794 2.31531 4.46652 3.53498 3.53516M5.77498 2.4735C6.17651 2.37951 6.5876 2.33253 6.99998 2.3335C11.0833 2.3335 13.4166 7.00016 13.4166 7.00016C13.0626 7.6626 12.6403 8.28626 12.1566 8.861M8.23665 8.23683C8.07644 8.40877 7.88323 8.54667 7.66857 8.64232C7.4539 8.73797 7.22217 8.7894 6.9872 8.79354C6.75223 8.79769 6.51882 8.75447 6.30092 8.66645C6.08301 8.57843 5.88507 8.44743 5.71889 8.28125C5.55271 8.11508 5.42171 7.91713 5.33369 7.69922C5.24568 7.48132 5.20245 7.24792 5.2066 7.01294C5.21075 6.77797 5.26218 6.54624 5.35782 6.33157C5.45347 6.11691 5.59138 5.92371 5.76331 5.7635M0.583313 0.583496L13.4166 13.4168" stroke="#8C4FF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_388_851">
+                                    <rect width="14" height="14" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg onclick="togglePasswordField(event, this);" class="show-hide-icon show-password-icon hide cursor-pointer" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="7.41501" cy="7.2764" r="2.15111" stroke="#8C4FF6" stroke-width="1.4"/>
+                                    <path d="M13.0017 6.2223C13.3962 6.67583 13.5935 6.9026 13.5935 7.27667C13.5935 7.65073 13.3962 7.8775 13.0017 8.33103C11.9002 9.59739 9.81099 11.5533 7.415 11.5533C5.01901 11.5533 2.92982 9.59739 1.82827 8.33103C1.43377 7.8775 1.23652 7.65073 1.23652 7.27667C1.23652 6.9026 1.43377 6.67583 1.82827 6.2223C2.92982 4.95594 5.01901 3 7.415 3C9.81099 3 11.9002 4.95594 13.0017 6.2223Z" stroke="#8C4FF6" stroke-width="1.7"/>
+                                </svg>                                    
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="main-footer-content">
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/signin.js"></script>
+  </body>
+</html>
