@@ -305,6 +305,7 @@ body,html {
 }
 .expert-care-content h6{
   color: #989898;
+  font-size: 21px;
 }
 
 .expert-care-content h3{
@@ -316,4 +317,62 @@ body,html {
 
 .expert-care-content h3 > span{
   color: #8C4FF6;
+}
+
+.expert-care-content .detail{
+  color: #565656;
+  font-size: 21px;
+  max-width: 550px;
+}
+.expert-care-content .medical-service{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.expert-care-content .medical-service > .keypoints{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.expert-care-content .medical-service > .keypoints > svg{
+  width: 16px;
+  height: 16px;
+}
+
+/* Footerrrr */
+
+
+.footer {
+  background-color: #F5F6F8;
+  padding: 40px 0;
+}
+.footer h5 {
+  font-weight: bold;
+  color: #000;
+}
+.footer p, .footer a {
+  color: #585858;
+  margin: 0;
+  font-size: 17px;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #7d6bea;
+}
+.footer .contact-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .contact-info i {
+  font-size: 18px;
+  color: #7d6bea;
+  margin-right: 8px;
+}
+
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
